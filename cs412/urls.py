@@ -21,11 +21,11 @@ from django.views.generic import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('mini_fb/', include('mini_fb.urls')),
-    path('', RedirectView.as_view(url='mini_fb/')),
+    path('mini_fb/', include('mini_fb.urls')),  # Old project path
+    path('voters/', include('voter_analytics.urls')),  # New voter_analytics path
+    path('', RedirectView.as_view(url='voters/')),  # Redirect root URL to voter_analytics
 ]
 
 

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'whitenoise.runserver_nostatic',
     'mini_fb',
+    'voter_analytics',
 ]
 
 MIDDLEWARE = [

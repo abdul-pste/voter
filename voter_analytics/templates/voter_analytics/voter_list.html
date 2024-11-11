@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voter List</title>
+    <link rel="stylesheet" href="{% static 'voter_analytics/styles.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Voter Records</h1>
+
+      <form method="get">
+        {{ form.as_p }}
+        <button type="submit">Filter</button>
+      </form>
+
+      <table>
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Street Address</th>
+            <th>Date of Birth</th>
+            <th>Party Affiliation</th>
+            <th>Voter Score</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for voter in voters %}
+          <tr>
+            <td>{{ voter.first_name }}</td>
+            <td>{{ voter.last_name }}</td>
+            <td>{{ voter.street_number }} {{ voter.street_name }}</td>
+            <td>{{ voter.date_of_birth }}</td>
+            <td>{{ voter.party_affiliation }}</td>
+            <td>{{ voter.voter_score }}</td>
+            <td><a href="{% url 'voter' voter.id %}">View Details</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <div class="pagination">
+        {% if voters.has_previous %}
+        <a
+          href="?{% if form.cleaned_data %}{{ form.cleaned_data|urlencode }}&{% endif %}page={{ voters.previous_page_number }}"
+          >Previous</a
+        >
+        {% endif %} Page {{ voters.number }} of {{ voters.paginator.num_pages }}
+        {% if voters.has_next %}
+        <a
+          href="?{% if form.cleaned_data %}{{ form.cleaned_data|urlencode }}&{% endif %}page={{ voters.next_page_number }}"
+          >Next</a
+        >
+        {% endif %}
+      </div>
+    </div>
+  </body>
+</html>
