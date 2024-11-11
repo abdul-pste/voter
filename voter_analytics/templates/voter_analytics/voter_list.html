@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{% static 'voter_analytics/styles.css' %}" />
   </head>
   <body>
+
+    <h1>Newton, MA Voter </h1>
     <div class="container">
       <h1>Voter Records</h1>
 
@@ -17,6 +19,16 @@
       </form>
 
       <table>
+
+        <!--
+        <thead>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+        </thead>
+        -->
+
+
         <thead>
           <tr>
             <th>First Name</th>
@@ -28,6 +40,8 @@
             <th>Details</th>
           </tr>
         </thead>
+
+
         <tbody>
           {% for voter in voters %}
           <tr>
@@ -49,7 +63,7 @@
           href="?{% if form.cleaned_data %}{{ form.cleaned_data|urlencode }}&{% endif %}page={{ voters.previous_page_number }}"
           >Previous</a
         >
-        {% endif %} Page {{ voters.number }} of {{ voters.paginator.num_pages }}
+        {% endif %} page {{ voters.number }} of {{ voters.paginator.num_pages }}
         {% if voters.has_next %}
         <a
           href="?{% if form.cleaned_data %}{{ form.cleaned_data|urlencode }}&{% endif %}page={{ voters.next_page_number }}"

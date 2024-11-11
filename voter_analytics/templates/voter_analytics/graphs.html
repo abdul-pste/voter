@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voter Graphs</title>
+    <link rel="stylesheet" href="{% static 'voter_analytics/styles.css' %}" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Voter Graphs</h1>
+
+      <h2>Voter Distribution by Year of Birth</h2>
+      <div>{{ birth_hist|safe }}</div>
+
+      <h2>Voter Distribution by Party Affiliation</h2>
+      <div>{{ party_pie_chart|safe }}</div>
+
+      <h2>Voter Participation in Past Elections</h2>
+      <div>{{ participation_hist|safe }}</div>
+    </div>
+  </body>
+</html>
