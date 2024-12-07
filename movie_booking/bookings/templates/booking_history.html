@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Booking History
+{% endblock %}
+
+{% block content %}
+<div class="cart-container">
+  <h2>Your Booking History</h2>
+  {% if bookings %}
+  <div class="cart-items">
+    {% for booking in bookings %}
+    <div class="cart-item">
+      <div class="cart-item-details">
+        <strong>Movie:</strong> {{ booking.showtime.movie.title }} <br>
+        <strong>Date:</strong> {{ booking.showtime.date|date:"M d, Y" }} <br>
+        <strong>Time:</strong> {{ booking.showtime.time|time:"H:i" }} <br>
+        <strong>Tickets:</strong> {{ booking.tickets }} <br>
+        <strong>Total Cost:</strong> ${{ booking.total_cost }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <form method="post" action="{% url 'delete_history' %}">
+    {% csrf_token %}
+    <button type="submit" class="btn-clear-cart">Clear Booking History</button>
+  </form>
+  {% else %}
+  <p class="empty-cart-message">You have no booking history.</p>
+  {% endif %}
+</div>
+{% endblock %}

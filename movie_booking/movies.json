@@ -1,0 +1,112 @@
+[
+    {
+        "title": "The Shawshank Redemption",
+        "genre": "Drama",
+        "duration": 142,
+        "rating": 9.3,
+        "poster_url": "https://www.themoviedb.org/t/p/original/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
+        "showtimes": [
+            { "date": "2024-12-01", "time": "18:30", "cinema_hall": "Hall 1" },
+            { "date": "2024-12-02", "time": "20:00", "cinema_hall": "Hall 2" }
+        ]
+    },
+    {
+        "title": "The Dark Knight",
+        "genre": "Action",
+        "duration": 152,
+        "rating": 9.0,
+        "poster_url": "https://www.themoviedb.org/t/p/original/1hRoyzDtpgMU7Dz4JF22RANzQO7.jpg",
+        "showtimes": [
+            { "date": "2024-12-01", "time": "21:00", "cinema_hall": "Hall 3" },
+            { "date": "2024-12-02", "time": "19:30", "cinema_hall": "Hall 4" }
+        ]
+    },
+    {
+        "title": "Inception",
+        "genre": "Sci-Fi",
+        "duration": 148,
+        "rating": 8.8,
+        "poster_url": "https://www.themoviedb.org/t/p/original/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
+        "showtimes": [
+            { "date": "2024-12-03", "time": "18:45", "cinema_hall": "Hall 5" },
+            { "date": "2024-12-04", "time": "20:15", "cinema_hall": "Hall 6" }
+        ]
+    },
+    {
+        "title": "Forrest Gump",
+        "genre": "Drama",
+        "duration": 142,
+        "rating": 8.8,
+        "poster_url": "https://www.themoviedb.org/t/p/original/saHP97rTPS5eLmrLQEcANmKrsFl.jpg",
+        "showtimes": [
+            { "date": "2024-12-05", "time": "17:00", "cinema_hall": "Hall 7" },
+            { "date": "2024-12-06", "time": "19:00", "cinema_hall": "Hall 8" }
+        ]
+    },
+    {
+        "title": "The Matrix",
+        "genre": "Sci-Fi",
+        "duration": 136,
+        "rating": 8.7,
+        "poster_url": "https://www.themoviedb.org/t/p/original/hEpWvX6Bp79eLxY1kX5ZZJcme5U.jpg",
+        "showtimes": [
+            { "date": "2024-12-07", "time": "18:00", "cinema_hall": "Hall 9" },
+            { "date": "2024-12-08", "time": "20:30", "cinema_hall": "Hall 10" }
+        ]
+    },
+    {
+        "title": "Pulp Fiction",
+        "genre": "Crime",
+        "duration": 154,
+        "rating": 8.9,
+        "poster_url": "https://www.themoviedb.org/t/p/original/plnlrtBUULT0rh3Xsjmpubiso3L.jpg",
+        "showtimes": [
+            { "date": "2024-12-09", "time": "18:00", "cinema_hall": "Hall 11" },
+            { "date": "2024-12-10", "time": "21:30", "cinema_hall": "Hall 12" }
+        ]
+    },
+    {
+        "title": "The Godfather",
+        "genre": "Crime",
+        "duration": 175,
+        "rating": 9.2,
+        "poster_url": "https://www.themoviedb.org/t/p/original/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+        "showtimes": [
+            { "date": "2024-12-11", "time": "19:00", "cinema_hall": "Hall 13" },
+            { "date": "2024-12-12", "time": "21:45", "cinema_hall": "Hall 14" }
+        ]
+    },
+    {
+        "title": "The Lion King",
+        "genre": "Animation",
+        "duration": 88,
+        "rating": 8.5,
+        "poster_url": "https://www.themoviedb.org/t/p/original/1TUg5pO1VZ4B0Q1amk3OlXvlpXV.jpg",
+        "showtimes": [
+            { "date": "2024-12-13", "time": "16:30", "cinema_hall": "Hall 15" },
+            { "date": "2024-12-14", "time": "18:45", "cinema_hall": "Hall 16" }
+        ]
+    },
+    {
+        "title": "Interstellar",
+        "genre": "Sci-Fi",
+        "duration": 169,
+        "rating": 8.6,
+        "poster_url": "https://www.themoviedb.org/t/p/original/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg",
+        "showtimes": [
+            { "date": "2024-12-15", "time": "20:00", "cinema_hall": "Hall 17" },
+            { "date": "2024-12-16", "time": "22:30", "cinema_hall": "Hall 18" }
+        ]
+    },
+    {
+        "title": "Gladiator",
+        "genre": "Action",
+        "duration": 155,
+        "rating": 8.5,
+        "poster_url": "https://www.themoviedb.org/t/p/original/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg",
+        "showtimes": [
+            { "date": "2024-12-17", "time": "19:30", "cinema_hall": "Hall 19" },
+            { "date": "2024-12-18", "time": "22:00", "cinema_hall": "Hall 20" }
+        ]
+    }
+]

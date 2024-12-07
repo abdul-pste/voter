@@ -1,0 +1,242 @@
+/* General body styling */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #1e1e2f, #2b2b3b);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Header styling */
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2.5rem;
+  color: #343434;
+}
+
+/* Movies container */
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Movie card styling */
+.movie-card {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+  border-radius: 15px;
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); /* Soft shadow */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.movie-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Movie poster styling */
+.movie-poster {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Movie card content */
+.movie-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #2f2f2f;
+}
+
+.movie-card p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #2e2e2e;
+}
+
+.movie-card ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+}
+
+.movie-card ul li {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: #1d1d1d;
+}
+
+ul li strong {
+  color: #f9a825;
+}
+
+/* Button styling */
+button, .book-now-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #ff8a00, #e52e71);
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Hover and active states */
+button:hover, .book-now-btn:hover {
+  background: linear-gradient(to right, #e52e71, #ff8a00);
+  transform: scale(1.05);
+}
+
+button:active, .book-now-btn:active {
+  transform: scale(0.95);
+}
+
+/* Different button color for details */
+.details-btn {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+.details-btn:hover {
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+}
+
+/* Empty message styling */
+.empty-message {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+  margin-top: 50px;
+}
+
+
+/* General container styling */
+.cart-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  color: #e0e0e0; /* Light text for readability */
+}
+
+.cart-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  color: #f9a825; /* Vibrant yellow for the heading */
+}
+
+/* Cart items container */
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Individual cart item */
+.cart-item {
+  background: rgba(33, 33, 33, 0.9); /* Slightly lighter dark background */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 15px;
+  color: #e0e0e0; /* Light text color */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease-in-out;
+}
+
+.cart-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Item details */
+.cart-item-details {
+  line-height: 1.6;
+}
+
+/* Highlighted text */
+.cart-item-details strong {
+  color: #ff6f00; /* Bright orange for important details */
+}
+
+/* Clear cart button */
+.btn-clear-cart {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #d32f2f, #ff5252); /* Red gradient */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out, transform 0.2s;
+}
+
+.btn-clear-cart:hover {
+  background: linear-gradient(135deg, #b71c1c, #d32f2f); /* Darker red on hover */
+  transform: scale(1.05);
+}
+
+.btn-clear-cart:active {
+  transform: scale(0.95);
+}
+
+/* Empty cart message */
+.empty-cart-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #f9a825; /* Yellow for emphasis */
+}
+
+/* General text styling */
+.cart-container p {
+  color: #b0bec5; /* Muted light gray */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .cart-container {
+    padding: 15px;
+  }
+
+  .cart-item {
+    padding: 10px;
+  }
+
+  .btn-clear-cart {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}

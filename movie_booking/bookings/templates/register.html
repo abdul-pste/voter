@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Register
+{% endblock %}
+
+{% block content %}
+<h2>Register</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn-register">Register</button>
+</form>
+<p>Already have an account? <a href="{% url 'login' %}">Login here</a>.</p>
+{% endblock %}
+
+<style>
+    .btn-register {
+        margin-top: 10px;
+        padding: 10px 20px;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.2s ease-in-out, transform 0.2s;
+    }
+
+    .btn-register:hover {
+        background: linear-gradient(135deg, #2575fc, #6a11cb);
+        transform: scale(1.05);
+    }
+
+    .btn-register:active {
+        transform: scale(0.97);
+    }
+</style>

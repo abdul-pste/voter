@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Profile
+{% endblock %}
+
+{% block content %}
+<div class="profile-container">
+  <h2>Your Profile</h2>
+  <div class="profile-card">
+    <p><strong>Name:</strong> {{ user.first_name }} {{ user.last_name }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Username:</strong> {{ user.username }}</p>
+    <a href="{% url 'edit_profile' %}" class="btn-edit-profile">Edit Profile</a>
+  </div>
+</div>
+
+<style>
+  .profile-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .profile-container h2 {
+    color: #444;
+    margin-bottom: 20px;
+  }
+
+  .profile-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+
+  .profile-card p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #555;
+  }
+
+  .btn-edit-profile {
+    display: inline-block;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease-in-out;
+  }
+
+  .btn-edit-profile:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+  }
+
+  .btn-edit-profile:active {
+    transform: scale(0.97);
+  }
+</style>
+{% endblock %}

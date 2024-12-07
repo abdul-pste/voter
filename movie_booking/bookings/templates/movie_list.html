@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %}Now Showing{% endblock %}
+
+{% block content %}
+<div class="movies-container">
+  {% for movie in movies %}
+  <div class="movie-card">
+    <img
+      src="{{ movie.poster_url|default:'https://via.placeholder.com/150' }}"
+      alt="{{ movie.title }} Poster"
+      class="movie-poster"
+    />
+    <h2>{{ movie.title }}</h2>
+    <p><strong>Genre:</strong> {{ movie.genre|default:"Not available" }}</p>
+    <p>
+      <strong>Duration:</strong> {{ movie.duration|default:"Unknown" }} minutes
+    </p>
+    <p><strong>Rating:</strong> {{ movie.rating|default:"Unrated" }}/10</p>
+    <h3>Showtimes:</h3>
+    <ul>
+      {% for showtime in movie.showtimes.all %}
+      <li>
+        <strong>Date:</strong> {{ showtime.date|date:"M d, Y" }}
+        <strong>Time:</strong> {{ showtime.time|time:"H:i" }}
+        <strong>Hall:</strong> {{ showtime.cinema_hall }}
+        <a href="{% url 'book_showtime' showtime.id %}" class="book-now-btn">Book Now</a>
+      </li>
+      {% endfor %}
+    </ul>
+    <a href="{% url 'movie_detail' movie.id %}" class="book-now-btn">See More Details</a>
+    <a href="{% url 'add_showtime' movie.id %}" class="add-showtime-btn">Add Showtime</a>
+  </div>
+  {% empty %}
+  <div class="empty-message">
+    <p>No movies available at the moment. Check back soon!</p>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
+
+<style>
+  .add-showtime-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #4caf50, #2e7d32); /* Green gradient */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.2s ease-in-out, transform 0.2s;
+  }
+
+  .add-showtime-btn:hover {
+    background: linear-gradient(135deg, #2e7d32, #4caf50); /* Reverse gradient */
+    transform: scale(1.05); /* Slightly enlarge the button */
+  }
+
+  .add-showtime-btn:active {
+    transform: scale(0.97); /* Press effect */
+  }
+</style>
